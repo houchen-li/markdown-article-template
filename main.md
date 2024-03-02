@@ -1,66 +1,76 @@
 ---
 output:
     pdf_document:
-        pdf_engine: 'xelatex'
-        path: './main.pdf'
+        pdf_engine: "xelatex"
+        path: "./main.pdf"
         includes:
-            in_header: 'header.tex'
-            before_body: 'doc_prefix.tex'
-            after_body: 'doc_suffix.tex'
-        pandoc_args:
-        - '--filter=pandoc-crossref'
+            in_header: "header.tex"
+            before_body: "doc_prefix.tex"
+            after_body: "doc_suffix.tex"
+#        pandoc_args:
+#            - '--filter=pandoc-crossref'
 export_on_save:
     pandoc: true
 ################################################
-documentclass: 'article'
+documentclass: "article"
 lang: en-US
 classoption:
-- 'notitlepage'
-- 'onecolumn'
-- 'twoside'
-- 'openright'
-papersize: 'a4'
+    - "notitlepage"
+    - "onecolumn"
+    - "twoside"
+    - "openright"
+papersize: "a4"
 geometry:
-- 'left=1.6in'
-- 'right=1in'
-- 'top=1.2in'
-- 'bottom=1.2in'
-fontenc: 'T1'
-fontsize: '10pt'
+    - "left=1.6in"
+    - "right=1in"
+    - "top=1.2in"
+    - "bottom=1.2in"
+#fontenc: 'T1' % Redundant with fontspec + XeLaTeX
+fontsize: "10pt"
 mainfont: NewComputerModern
 mainfontoptions:
-- 'Extension=.otf'
-- 'UprightFont=NewCM10-Regular'
-- 'BoldFont=NewCM10-Bold'
-- 'ItalicFont=NewCM10-Italic'
-- 'BoldItalicFont=NewCM10-BoldItalic'
-CJKmainfont: 'Source Han Serif CN'
+    - "Path=fonts/"
+    - "Extension=.otf"
+    - "UprightFont=NewCM10-Regular"
+    - "BoldFont=NewCM10-Bold"
+    - "ItalicFont=NewCM10-Italic"
+    - "BoldItalicFont=NewCM10-BoldItalic"
+sansfont: NewComputerModernSans
+sansfontoptions:
+    - "Path=fonts/"
+    - "Extension=.otf"
+    - "UprightFont=NewCMSans10-Regular"
+    - "BoldFont=NewCMSans10-Bold"
+    - "ItalicFont=NewCMSans10-Oblique"
+    - "BoldItalicFont=NewCMSans10-BoldOblique"
+mathfont: "NewCMMath-Regular.otf"
+mathfontoptions:
+    - "Path=fonts/"
+CJKmainfont: "SourceHanSerifSC-Regular.otf"
 CJKoptions:
-- 'Extension=.otf'
-- 'UprightFont=SourceHanSerifCN-Regular'
-- 'BoldFont=SourceHanSerifCN-Bold'
-- 'ItalicFont=ukai.ttc'
+    - "Path=fonts/"
+    - "BoldFont=SourceHanSerifSC-Bold.otf"
+    - "ItalicFont=ukai.ttc"
 #- 'BoldItalicFont='
-linestretch: '1.25'
+linestretch: "1.25"
 indent: true
 #toc: true
 #toc-title: 'Contents'
 #toc-depth: 3
 numbersections: false
 hyperrefoptions:
-- 'linktoc=all'
+    - "linktoc=all"
 bibliography:
-- 'refs/bibliography.bib'
-csl: 'refs/american-physics-society.csl'
+    - "refs/bibliography.bib"
+csl: "refs/american-physics-society.csl"
 ################################################
-title: 'Quantum Mechanics'
+title: "Quantum Mechanics"
 author:
-- 'Wikipedia'
-date: 'May 16th, 2020'
+    - "Wikipedia"
+date: "May 16th, 2020"
 abstract:
-- 'Quantum mechanics is, at least at first glance and at least in part, a mathematical machine for predicting the behaviors of microscopic particles — or, at least, of the measuring instruments we use to explore those behaviors — and in that capacity, it is spectacularly successful: in terms of power and precision, head and shoulders above any theory we have ever had. Mathematically, the theory is well understood; we know what its parts are, how they are put together, and why, in the mechanical sense (i.e., in a sense that can be answered by describing the internal grinding of gear against gear), the whole thing performs the way it does, how the information that gets fed in at one end is converted into what comes out the other. The question of what kind of a world it describes, however, is controversial; there is very little agreement, among physicists and among philosophers, about what the world is like according to quantum mechanics. Minimally interpreted, the theory describes a set of facts about the way the microscopic world impinges on the macroscopic one, how it affects our measuring instruments, described in everyday language or the language of classical mechanics. Disagreement centers on the question of what a microscopic world, which affects our apparatuses in the prescribed manner, is, or even could be, like intrinsically; or how those apparatuses could themselves be built out of microscopic parts of the sort the theory describes.'
+    - "Quantum mechanics is, at least at first glance and at least in part, a mathematical machine for predicting the behaviors of microscopic particles — or, at least, of the measuring instruments we use to explore those behaviors — and in that capacity, it is spectacularly successful: in terms of power and precision, head and shoulders above any theory we have ever had. Mathematically, the theory is well understood; we know what its parts are, how they are put together, and why, in the mechanical sense (i.e., in a sense that can be answered by describing the internal grinding of gear against gear), the whole thing performs the way it does, how the information that gets fed in at one end is converted into what comes out the other. The question of what kind of a world it describes, however, is controversial; there is very little agreement, among physicists and among philosophers, about what the world is like according to quantum mechanics. Minimally interpreted, the theory describes a set of facts about the way the microscopic world impinges on the macroscopic one, how it affects our measuring instruments, described in everyday language or the language of classical mechanics. Disagreement centers on the question of what a microscopic world, which affects our apparatuses in the prescribed manner, is, or even could be, like intrinsically; or how those apparatuses could themselves be built out of microscopic parts of the sort the theory describes."
 ---
-
 
 # Introduction
 
@@ -110,10 +120,10 @@ Quantum mechanics was initially developed to provide a better explanation and de
 
 Broadly speaking, quantum mechanics incorporates four classes of phenomena for which classical physics cannot account:
 
-* quantization of certain physical properties
-* quantum entanglement
-* principle of uncertainty
-* wave–particle duality
+- quantization of certain physical properties
+- quantum entanglement
+- principle of uncertainty
+- wave–particle duality
 
 # Results
 
